@@ -1,17 +1,15 @@
 # CLO835 Assignment 2 — Python 3.14 starter
-# This is VERSION 0.2. To release VERSION 0.3, change MESSAGE below to:
-#   "Hello world from the CLO835 class and <YOUR_STUDENT_ID>!"
-# (replace <YOUR_STUDENT_ID> with your own Seneca student ID, e.g. 10112233)
+# VERSION 0.3 — includes student ID in message
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
-VERSION = "0.2"
-MESSAGE = "Hello world from the CLO835 class!"
+VERSION = "0.3"
+MESSAGE = "Hello world from the CLO835 class and 029438025!"
 PORT = 8080
 
 
 class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        if self.path in ("/healthz", "/readyz"):   # for the bonus probes
+        if self.path in ("/healthz", "/readyz"):
             self.send_response(200)
             self.end_headers()
             self.wfile.write(b"ok")
