@@ -1,10 +1,7 @@
-# TODO: Build a container image for your chosen starter app.
 # Requirement: the image must run your app and serve on port 8080.
-# Tip: use the files from apps/<your-language>/.
+FROM python:3.14-rc-slim
 
-# FROM <choose a base image for your language>
-# WORKDIR /app
-# COPY . .
-# RUN <build your app, if it needs a build step>
-# EXPOSE 8080
-# CMD ["<command that starts your app>"]
+WORKDIR /app
+COPY apps/python/app.py .
+EXPOSE 8080
+CMD ["python3", "app.py"]
