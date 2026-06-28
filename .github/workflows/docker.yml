@@ -35,6 +35,6 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/clo835-a3:${{ env.APP_VERSION }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/clo835-a3:${{ github.sha }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/clo835-a3:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/clo835-a2:${{ env.APP_VERSION }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/clo835-a2:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/clo835-a2:latest
